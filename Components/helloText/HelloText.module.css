@@ -23,6 +23,14 @@
   user-select: none;
 }
 
+@media only screen and (max-width:1024px){
+  .textContainer{
+    grid-gap: 30px;
+  }
+  .textContainer h1{
+    font-size: 80px;
+  }
+}
 
 @media only screen and (max-width:768px){
   .textContainer{

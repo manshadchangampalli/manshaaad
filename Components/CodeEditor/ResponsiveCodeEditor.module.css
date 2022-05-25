@@ -54,7 +54,7 @@
     height: calc(100%);
     padding-bottom: 80px;
 }
-@media only screen and (max-width:768px) {
+@media only screen and (max-width:1024px) {
     .resCodeEditor{
         display: block;
     }

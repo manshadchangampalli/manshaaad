@@ -24,7 +24,7 @@ const Editor = (props) => {
       language
   } = props
   return (
-    <div>
+    <div style={{overflow:"hidden"}}>
         <Controlled
         onBeforeChange={handleChange}
         // similar onChange

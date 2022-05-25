@@ -9,14 +9,14 @@
   background: linear-gradient(180deg, #000744 0%, #030725 100%);
 }
 .allItems input {
-    padding: 0 50px 0 20px;
-    border-radius: 20px;
-    outline: none;
-    border: none;
-    font-size: 24px;
-    width: 100%;
-    height: 100%;
-  }
+  padding: 0 50px 0 20px;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  font-size: 24px;
+  width: 100%;
+  height: 100%;
+}
 .inputBox {
   max-width: 450px;
   position: relative;
@@ -31,18 +31,18 @@
   top: 50%;
   transform: translateY(-50%);
 }
-.itemsContainer{
-    width: auto;
-    height: auto;
-    grid-gap: 10px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+.itemsContainer {
+  width: auto;
+  height: auto;
+  grid-gap: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
-.searchBoxContainer{
+.searchBoxContainer {
   display: grid;
   align-items: end;
 }
-.resultBox{
+.resultBox {
   position: absolute;
   width: 100%;
   z-index: 999;
@@ -52,7 +52,7 @@
   border-radius: 20px;
   background: rgb(255, 255, 255);
 }
-.resultBox li{
+.resultBox li {
   width: 100%;
   display: grid;
   border-radius: 5px;
@@ -62,23 +62,28 @@
   height: 40px;
   cursor: pointer;
 }
-.resultBox li:hover{
+.resultBox li:hover {
   background: rgba(0, 110, 255, 0.062);
 }
-.resultBox li:nth-last-child(1){
+.resultBox li:nth-last-child(1) {
   border-bottom: none;
 }
 
-@media  only screen and ( max-width:768px) {
-  .inputBox{
+@media only screen and (max-width: 768px) {
+  .inputBox {
     width: 80%;
     place-self: center;
   }
-  .itemsContainer{
-    grid-template-columns: repeat(2,1fr);
+  .itemsContainer {
+    grid-template-columns: repeat(2, 1fr);
     width: 90vw;
   }
-  .allItems{
+  .allItems {
     padding-bottom: 70px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .itemsContainer {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
