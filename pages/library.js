@@ -2,6 +2,7 @@ import React from "react";
 import NavBar from "../Components/navbar/NavBar";
 import {
   libraryPage,
+  libraryContainer,
   inputBox,
   searchIcon,
   latestItem,
@@ -54,55 +55,59 @@ const Library = ({ data }) => {
     setWindowOnClick(true);
     setSearchInput(e.target.value);
 
-    const searchTerm = e.target.value.toLowerCase()
-    const items = data.filter((value,i) => {
-        return value.name.toLowerCase().match(new RegExp(searchTerm, 'g')) &&  i < 4
-    })
-    setSearchData(items)
+    const searchTerm = e.target.value.toLowerCase();
+    const items = data.filter((value, i) => {
+      return (
+        value.name.toLowerCase().match(new RegExp(searchTerm, "g")) && i < 4
+      );
+    });
+    setSearchData(items);
   };
   return (
     <div ref={allItemsRef} className={libraryPage}>
       <Logo />
       <ResponsiveNav />
       <NavBar />
-      <div className={inputBox}>
-        <input ref={serachBoxRef} onChange={handleOnChange} type="text" />
-        <div className={searchIcon}>
-          <Image width={20} height={20} alt="" src={SearchIcon} />
+      <div className={libraryContainer}>
+        <div className={inputBox}>
+          <input ref={serachBoxRef} onChange={handleOnChange} type="text" />
+          <div className={searchIcon}>
+            <Image width={20} height={20} alt="" src={SearchIcon} />
+          </div>
+          {(searchData.length > 0 || searchInput.length > 0) && windowClick && (
+            <ul ref={serachItemRef} className={resultBox}>
+              {searchData.map((data, i) => (
+                <>
+                  <Link href={`/library/${data._id}`} passHref>
+                    <li key={i}>{data.name}</li>
+                  </Link>
+                </>
+              ))}
+              {searchData.length === 0 && searchInput.length > 0 && (
+                <li>No item found</li>
+              )}
+            </ul>
+          )}
         </div>
-        {(searchData.length > 0 || searchInput.length > 0) && windowClick && (
-          <ul ref={serachItemRef} className={resultBox}>
-            {searchData.map((data, i) => (
-              <>
-                <Link href={`/library/${data._id}`} passHref>
-                  <li key={i}>{data.name}</li>
+        <div className={latestItem}>
+          {data
+            .filter((data, i) => {
+              return i < 4;
+            })
+            .map((data, i) => {
+              return (
+                <Link key={i} href={`/library/${data._id}`} passHref>
+                  <div>
+                    <LibraryItem name={data.name} />
+                  </div>
                 </Link>
-              </>
-            ))}
-            {searchData.length === 0 && searchInput.length > 0 && (
-              <li>No item found</li>
-            )}
-          </ul>
-        )}
+              );
+            })}
+        </div>
+        <Link href={"/all-items"} passHref>
+          <button>view all</button>
+        </Link>
       </div>
-      <div className={latestItem}>
-        {data
-          .filter((data, i) => {
-            return i < 4;
-          })
-          .map((data, i) => {
-            return (
-              <Link key={i} href={`/library/${data._id}`} passHref>
-                <div>
-                  <LibraryItem name={data.name} />
-                </div>
-              </Link>
-            );
-          })}
-      </div>
-      <Link href={"/all-items"} passHref>
-        <button>view all</button>
-      </Link>
     </div>
   );
 };
