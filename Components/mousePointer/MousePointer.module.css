@@ -1,0 +1,27 @@
+.mousePointer {
+  position: absolute;
+  width: 536px;
+  height: 350px;
+  left: 368px;
+  transform: translate(-50%,-50%);
+  top: 95px;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #003a70 0%,
+    rgba(130, 1, 191, 0.421875) 43.23%,
+    rgba(255, 0, 0, 0) 100%
+  );
+}
+
+.pointerContainer{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+@media only screen and (max-width:768px){
+  .mousePointer{
+    display: none;
+  }
+}

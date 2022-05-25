@@ -1,0 +1,53 @@
+.postPage{
+    width: 100vw;
+    height: 100vh;
+    padding: 50px 100px;
+    background: linear-gradient(180deg, #000744 0%, #030725 100%);
+}
+.popupForLibraryName{
+    width: 400px;
+    height: 300px;
+    background: #000;
+    border:1px solid rgba(255, 255, 255, 0.26);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 999999;
+    border-radius: 20px;
+}
+.popupContainer{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+.popupContainer svg{
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+    top: 20px;
+}
+.popupContainer form{
+    display: flex;
+    place-items: center;
+    flex-direction: column;
+    row-gap: 20px;
+}
+.popupContainer form button{
+    width: 80px;
+    height: 30px;
+    background: white;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+.popupContainer form input{
+    color: white;
+    padding-bottom: 5px;
+    background: #000;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.116);
+}

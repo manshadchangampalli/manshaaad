@@ -1,0 +1,93 @@
+.libraryPage {
+  max-width: 100vw;
+  min-height: 100vh;
+  height: auto;
+  padding: 40px 0;
+  display: grid;
+  grid-gap:50px;
+  overflow-x: hidden;
+  justify-items: center;
+  background: linear-gradient(180deg, #000744 0%, #030725 100%);
+}
+.libraryPage input {
+  padding: 0 50px 0 20px;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  font-size: 24px;
+  width: 100%;
+  height: 100%;
+}
+.inputBox {
+  max-width: 450px;
+  position: relative;
+  height: 50px;
+  width: 40vw;
+}
+.searchIcon {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.latestItem {
+  width: auto;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: repeat(2,1fr);
+  grid-gap: 10px;
+}
+.libraryPage button {
+  width: 100px;
+  border: 1px solid #fff;
+  outline: none;
+  border-radius: 10px;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  height: 40px;
+}
+.libraryPage button:hover{
+  background: rgba(0, 0, 0, 0.432);
+}
+.resultBox{
+  position: absolute;
+  width: 100%;
+  z-index: 999;
+  padding: 10px;
+  height: auto;
+  top: calc(100% + 10px);
+  border-radius: 20px;
+  background: rgb(255, 255, 255);
+}
+.resultBox li{
+  width: 100%;
+  display: grid;
+  border-radius: 5px;
+  padding: 0 10px;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.144);
+  height: 40px;
+  cursor: pointer;
+}
+.resultBox li:hover{
+  background: rgba(0, 110, 255, 0.062);
+}
+.resultBox li:nth-last-child(1){
+  border-bottom: none;
+}
+
+@media only screen and (max-width:768px) {
+  .libraryPage{
+    grid-gap: 25px;
+  }
+  .inputBox{
+    width: 80%;
+  }
+  .latestItem{
+    width: 90%;
+  }
+}

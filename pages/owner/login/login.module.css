@@ -1,0 +1,96 @@
+.loginPage{
+    width: 100vw;
+    /* background-image: url('../../../public/images/code\ bg/bg.webp'); */
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+.loginBox{
+    width: 380px;
+    height: 320px;
+    background: rgba(255, 255, 255, 0.43);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    display: grid;
+    grid-template-rows: 80px auto;
+}
+.loginHead{
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+    height: 100%;
+    background: white;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.loginHead img{
+    width: 18px;
+    height: 18px;
+    object-fit: cover;
+}
+.loginText{
+    display: grid;
+}
+.loginText h1{
+    font-size: 24px;
+    font-weight: 700;
+    color: rgb(0, 0, 141);
+    font-family: 'Poppins', sans-serif;
+}
+.loginText p{
+    font-size: 10px;
+    color: rgba(0, 0, 0, 0.511);
+    font-family: 'Poppins', sans-serif;
+}
+.loginText span{
+    color: #FF5A5A;
+}
+.loginBody{
+    width: 100%;
+    grid-gap: 10px;
+    height: 100%;
+    display: grid;
+    padding: 20px;
+    grid-template-rows: repeat(4,1fr);
+}
+.usernameWraper,.passwordWraper{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: grid;
+}
+.loginBody input{
+    border-radius: 10px;
+    border:  none ;
+    padding: 0 10px 0 50px;
+    outline: none;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.25);
+}
+.loginBody img{
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    width: 20px;
+    object-fit: cover;
+    height: 20px;
+    transform: translate(0,-50%);
+}
+.loginBody button{
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.25);
+    outline: none;
+    color: white;
+    background: #FF5A5A;
+}
+button.btnLetsGo{
+    background-color: blue;
+}

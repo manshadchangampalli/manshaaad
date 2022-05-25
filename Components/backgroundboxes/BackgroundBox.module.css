@@ -1,0 +1,46 @@
+.backgroundBoxContainer{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+.boxOne{
+    width: clamp(300px,55%,600px);
+    height: 300px;
+    position: absolute;
+    background: #000;
+    right: 0;
+    top: 0;
+}
+.boxTwo{
+    width: 30% ;
+    height: 400px;
+    position: absolute;
+    background: #000;
+    right: 500px;
+    top: 30%;
+}
+.boxThree{
+    width: clamp(200px,28%,400px);
+    height: 300px;
+    position: absolute;
+    background: #000;
+    left: 100px;
+    top: 8%;
+}
+
+@media only screen and (max-width:768px){
+    .boxOne,.boxThree,.boxTwo{
+        width: 70%;
+    }
+    .boxThree{
+        display: none;
+    }
+    .boxTwo{
+        left: 0;
+        right: inherit;
+    }
+    
+  }
