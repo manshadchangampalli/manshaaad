@@ -50,16 +50,6 @@ const ResponsiveNav = () => {
           />
         </div>
       </Link>
-      <Link passHref href={"/contact"}>
-        <div className={imageContainer}>
-          <Image
-            layout="fill"
-            objectFit="cover"
-            src={"/images/icons/username.png"}
-            alt=""
-          />
-        </div>
-      </Link>
     </div>
   );
 };
