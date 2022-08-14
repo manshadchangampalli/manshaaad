@@ -7,7 +7,6 @@ const MousePointer = () => {
   const [pointLeft, setPointLeft] = useState(500);
   useEffect(() => {
     window.addEventListener("mousemove", (e) => {
-      console.log(e.clientY, e.clientX);
       setPointLeft(e.clientX);
       setPointTop(e.clientY);
     });

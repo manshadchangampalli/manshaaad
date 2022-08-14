@@ -1,8 +1,18 @@
-/** @type {import('next').NextConfig} */
+const removeImports = require("next-remove-imports")();
 const nextConfig = {
   reactStrictMode: true,
   images: {
     domains: ['firebasestorage.googleapis.com'],
-  }
+  },
 }
-module.exports = nextConfig
+// module.exports = removeImports({
+//   experimental: { esmExternals: true }
+// });
+module.exports = { 
+  ... removeImports({
+    experimental: { esmExternals: true }
+  }),
+  ... nextConfig
+};
+
+
